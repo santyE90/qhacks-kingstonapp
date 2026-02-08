@@ -50,7 +50,7 @@ export default function SignupPage() {
     <div className="surface-card rounded-3xl p-6">
       <div className="mb-6 text-center">
         <h1 className="font-[var(--font-heading)] text-2xl font-semibold">Create account</h1>
-        <p className="text-sm text-muted">Join CityFix and start reporting issues.</p>
+        <p className="text-sm text-muted">Join KingstonConnect and start reporting issues.</p>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4">
         <label className="block text-sm font-medium">
