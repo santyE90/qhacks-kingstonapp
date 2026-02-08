@@ -43,6 +43,19 @@ export default function FeedPage() {
 
   return (
     <section className="space-y-4">
+      <div className="hero-panel px-5 py-5">
+        <div className="relative z-10">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent-strong)]">
+            Community pulse
+          </p>
+          <h2 className="mt-2 font-[var(--font-heading)] text-2xl font-semibold">
+            Keep Kingston Moving.
+          </h2>
+          <p className="mt-1 text-sm text-muted">
+            Report issues fast and follow the fixes as they happen.
+          </p>
+        </div>
+      </div>
       <div className="flex items-center justify-between">
         <div>
           <h2 className="font-[var(--font-heading)] text-xl font-semibold">Issue Feed</h2>
@@ -52,7 +65,7 @@ export default function FeedPage() {
 
       {issues.length ? (
         <div className="space-y-2">
-          <p className="text-sm text-muted">Map view (issues with coordinates).</p>
+          <p className="text-sm text-muted">Map view.</p>
           <IssueMap issues={issues} />
         </div>
       ) : null}

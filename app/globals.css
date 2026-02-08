@@ -73,6 +73,41 @@ body {
   color: var(--accent-strong);
 }
 
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(22, 71, 142, 0.18);
+  background: linear-gradient(135deg, rgba(22, 71, 142, 0.16), rgba(233, 240, 255, 0.6));
+  box-shadow: 0 18px 40px rgba(13, 37, 84, 0.18);
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: -40% 20% auto auto;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(255, 230, 214, 0.9), transparent 60%);
+  opacity: 0.8;
+}
+
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: auto auto -50% -10%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(219, 232, 255, 0.9), transparent 65%);
+  opacity: 0.7;
+}
+
+.card-accent-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(22, 71, 142, 0.9), rgba(22, 71, 142, 0.2));
+}
+
 .text-muted {
   color: var(--muted);
 }

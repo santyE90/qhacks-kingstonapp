@@ -13,6 +13,7 @@ export default function IssueCard({ issue, cover }: Props) {
       href={`/issues/${issue.id}`}
       className="surface-card block rounded-2xl p-4 transition hover:-translate-y-0.5"
     >
+      <div className="card-accent-bar mb-3" />
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="font-[var(--font-heading)] text-lg font-semibold">{issue.title}</h3>
