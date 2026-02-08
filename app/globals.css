@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  color-scheme: light;
+  --background: #f1f5ff;
+  --foreground: #161616;
+  --muted: #6b6b6b;
+  --surface: #ffffff;
+  --surface-2: #e9effa;
+  --accent: #16478e;
+  --accent-2: #0f172a;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+  --border: #dbe3f0;
+  --shadow: 0 16px 36px rgba(13, 37, 84, 0.16);
+  --tint-1: #dbe8ff;
+  --tint-2: #efe2ff;
+  --tint-3: #dcf7ea;
+  --tint-4: #ffe6d6;
+  --accent-strong: #0f3d8a;
+  --accent-soft: #e1ebff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-body);
+}
+
+body {
+  background:
+    radial-gradient(1100px 700px at -10% -10%, var(--tint-1), transparent 55%),
+    radial-gradient(900px 650px at 110% 10%, var(--tint-2), transparent 55%),
+    radial-gradient(900px 700px at 50% 120%, var(--tint-3), transparent 60%),
+    radial-gradient(700px 500px at 15% 80%, var(--tint-4), transparent 60%),
+    linear-gradient(180deg, #f4f7ff 0%, #e9f0ff 100%);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.app-shell {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: transparent;
+}
+
+.surface-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.surface-muted {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+.surface-accent {
+  background: linear-gradient(135deg, rgba(22, 71, 142, 0.14), rgba(22, 71, 142, 0.04));
+  border: 1px solid rgba(22, 71, 142, 0.18);
+}
+
+.surface-accent-strong {
+  background: linear-gradient(135deg, rgba(22, 71, 142, 0.2), rgba(255, 230, 214, 0.35));
+  border: 1px solid rgba(22, 71, 142, 0.22);
+}
+
+.accent-text {
+  color: var(--accent-strong);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.status-pill {
+  border-radius: 999px;
+  padding: 0.125rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-open {
+  background: rgba(245, 158, 11, 0.15);
+  color: #92400e;
+}
+
+.badge-progress {
+  background: rgba(29, 78, 216, 0.12);
+  color: #1d4ed8;
+}
+
+.badge-resolved {
+  background: rgba(22, 163, 74, 0.15);
+  color: #166534;
+}
+
+.bottom-nav {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+/* Keep Leaflet map layers under the app chrome */
+.leaflet-container {
+  z-index: 0;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  font-weight: 600;
+}
